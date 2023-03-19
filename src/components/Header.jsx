@@ -1,9 +1,13 @@
 // Componente header attaccato al body
 
+import Card from "./Card";
+
 export default function Header() {
   return (
     <>
-      <h1>componente header</h1>
+      <section className="container mx-auto h-screen bg-slate-400 flex mt-12">
+        <Card />
+      </section>
     </>
   );
 }

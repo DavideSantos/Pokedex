@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
     <>
-      <nav className="bg-slate-900 w-full h-12 flex">
+      <nav className="bg-slate-900 w-full h-12 flex fixed top-0">
         <div className="container mx-auto flex items-center justify-between p-4 w-auto gap-x-6">
           <div className="flex items-center flex-shrink-0">
             <img
