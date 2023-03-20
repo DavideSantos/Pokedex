@@ -15,7 +15,7 @@ export default function Header() {
     setLoadMore(data.next);
 
     function createCard(result) {
-      result.forEach(async (pokemon) => {
+      result.map(async (pokemon) => {
         const response = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
         );
@@ -30,30 +30,19 @@ export default function Header() {
   useEffect(() => {
     fetchAllPokemons();
   }, []);
-  // useEffect(() => {
-  //   const url = "https://pokeapi.co/api/v2/pokemon/raichu";
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(url);
-  //       const json = await response.json();
-  //       setPokemon(json);
-  //     } catch (error) {
-  //       console.log("error", error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
 
   return (
     <>
-      <section className="container mx-auto h-screen bg-slate-400 flex mt-12">
+      <div className="container mx-auto bg-slate-400 flex mt-12 grid grid-cols-3">
         {allPokemons.map((pokemon, i) => (
           <Card key={i} pokemon={pokemon} />
         ))}
+      </div>
+      <div className="flex justify-center">
         <button className="load-more" onClick={() => fetchAllPokemons()}>
           Carica ancora
         </button>
-      </section>
+      </div>
     </>
   );
 }
