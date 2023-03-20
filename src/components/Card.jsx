@@ -1,12 +1,11 @@
 export default function Card(props) {
-  console.log(props);
   return (
     <>
       <div className="max-w-2xl mx-auto mt-2">
         <div className="bg-white shadow-2xl border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
           <img
             className="rounded-t-lg mx-auto"
-            src={props.pokemon.sprites.front_default}
+            src={props.pokemon.sprites.other.dream_world.front_default}
             alt=""
           />
           <div className="p-5">
