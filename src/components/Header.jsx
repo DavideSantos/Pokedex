@@ -47,8 +47,8 @@ export default function Header() {
   return (
     <>
       <section className="container mx-auto h-screen bg-slate-400 flex mt-12">
-        {allPokemons.map((pokemon) => (
-          <Card key={pokemon.id} pokemon={pokemon} />
+        {allPokemons.map((pokemon, i) => (
+          <Card key={i} pokemon={pokemon} />
         ))}
         <button className="load-more" onClick={() => fetchAllPokemons()}>
           Carica ancora
