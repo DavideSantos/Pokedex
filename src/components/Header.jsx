@@ -29,6 +29,7 @@ export default function Header() {
 
   useEffect(() => {
     fetchAllPokemons();
+    // eslint-disable-next-line
   }, []);
 
   return (
