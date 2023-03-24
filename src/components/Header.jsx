@@ -34,7 +34,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="container mx-auto bg-slate-400 mt-12 grid grid-cols-3">
+      <div className="container mx-auto bg-slate-400 mt-12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {allPokemons.map((pokemon, i) => (
           <Card key={i} pokemon={pokemon} />
         ))}
