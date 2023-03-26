@@ -21,7 +21,7 @@ export default function Header() {
         );
         const data = await response.json();
         setAllPokemons((currentList) => [...currentList, data]);
-        await allPokemons.sort((a, b) => a.id - b.id);
+        // await allPokemons.sort((a, b) => a.id - b.id);
       });
     }
     createCard(data.results);
@@ -40,8 +40,11 @@ export default function Header() {
         ))}
       </div>
       <div className="flex justify-center">
-        <button className="load-more" onClick={() => fetchAllPokemons()}>
-          Carica ancora
+        <button
+          className="rounded p-2 my-7 bg-slate-900 text-white"
+          onClick={() => fetchAllPokemons()}
+        >
+          Carica Ancora
         </button>
       </div>
     </>
