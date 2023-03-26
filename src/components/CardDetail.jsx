@@ -21,26 +21,28 @@ export default function CardDetail(props) {
             <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white capitalize">
               Nome: {props.pokemon.name}
             </h5>
-            <p className="font-normal text-white mb-3 capitalize">
+            <p className="font-normal text-gray-700 dark:text-gray-400 mb-3 capitalize">
               Ordine nel Pokèdex:{" "}
               <span className="text-gray-700 dark:text-gray-400">
                 {props.pokemon.order} posto
               </span>
             </p>
-            <p className="font-normal text-white mb-3 capitalize">
+            <p className="font-normal text-gray-700 dark:text-gray-400 mb-3 capitalize">
               Peso:{" "}
               <span className="text-gray-700 dark:text-gray-400">
                 {props.pokemon.weight} lb
               </span>
             </p>
-            <p className="font-normal text-white mb-3 capitalize">
+            <p className="font-normal text-gray-700 dark:text-gray-400 mb-3 capitalize">
               Tipo di Pokèmon:{" "}
               <span className="text-gray-700 dark:text-gray-400">
                 {props.pokemon.types[0].type.name}
               </span>
             </p>
             <div>
-              <strong className="text-white mt-3">Attacchi Base</strong>
+              <strong className="text-gray-700 dark:text-gray-400 mt-3">
+                Attacchi Base
+              </strong>
               {props.pokemon.abilities.map((item, i) => {
                 return (
                   <h2
@@ -56,7 +58,9 @@ export default function CardDetail(props) {
               {statsContent &&
                 statsContent.map((stat, i) => (
                   <div key={stat.field}>
-                    <strong className="text-white">{stat.title}: </strong>
+                    <strong className=" text-gray-700 dark:text-gray-400">
+                      {stat.title}:{" "}
+                    </strong>
                     <span className="font-normal text-gray-700 dark:text-gray-400">
                       {props.pokemon.stats[i].base_stat} /100
                     </span>
