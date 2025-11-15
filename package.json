@@ -3,35 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.11.14",
-    "@mui/styled-engine-sc": "^5.11.11",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.9.0",
-    "react-scripts": "^5.0.1",
-    "styled-components": "^5.3.9",
-    "web-vitals": "^2.1.4"
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fontsource/roboto": "^5.2.8",
+    "@mui/icons-material": "^7.3.5",
+    "@mui/material": "^7.3.5",
+    "@mui/styled-engine-sc": "^7.3.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.6",
+    "styled-components": "^6.1.19"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "buildtail": "npx tailwindcss -i ./src/input.css -o ./src/App.css",
     "watch": "npx tailwindcss -i ./src/input.css -o ./src/App.css --watch"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -46,6 +35,8 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.2.7"
+    "@vitejs/plugin-react": "^5.1.1",
+    "tailwindcss": "^4.1.17",
+    "vite": "^7.2.2"
   }
 }
