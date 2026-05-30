@@ -4,23 +4,55 @@
 /node_modules
 /.pnp
 .pnp.js
+.yarn/
 
 # testing
 /coverage
 
-# production
+# production build output
 /build
+/dist
 
-# misc
-.DS_Store
+# environment variables (mai esporre segreti)
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*.local
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# editor / IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Local Netlify folder
 .netlify
+
+# Vite cache
+.vite/
+vite.config.js.timestamp-*
+
+# TypeScript build info
+*.tsbuildinfo
+
+# design assets locali (non necessari su GitHub)
+.stitch/
